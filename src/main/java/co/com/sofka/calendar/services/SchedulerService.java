@@ -38,12 +38,6 @@ public class SchedulerService {
                 .map(toProgramDate(startDate, endDate, pivot[0], index))
                 .switchIfEmpty(Mono.error(new RuntimeException("Non existing program")));
 
-
-               /* Optional.ofNullable(program)
-                .map(this::getDurationOf)
-                .orElseThrow(() -> new RuntimeException("El programa academnico no existe"))
-                .map(toProgramDate(startDate, endDate, pivot[0], index))
-                .collect(Collectors.toList());*/
     }
 
     //No tocar
